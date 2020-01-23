@@ -6,7 +6,9 @@ Benchmarks play an important role in the development of any new systems. Even th
 
 
 Usage
-
+To use PGBench on an IDE, download the source code file named RDFtoPGConverter and pom.xml. Compile them as a maven project 
+Note that the input RDF file can be in either .ttl format or .nt format. Pass the input file as argument when running the convertor.
+The converter gives a JSON format file as an output which represents a property graph corresponding to the input RDF data.
 
 
 Future work
