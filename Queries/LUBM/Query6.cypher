@@ -1,0 +1,2 @@
+MATCH(X:Student) 
+RETURN X
