@@ -1,3 +1,3 @@
-MATCH(X:Student) 
-WHERE X.takesCourse = “http://www.Department0.University0.edu/GraduateCourse0” 
+MATCH(X:ResearchGroup) 
+WHERE X:subOrganizationOf = “http://www.University0.edu” 
 RETURN X
