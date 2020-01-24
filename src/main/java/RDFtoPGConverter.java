@@ -50,16 +50,16 @@ public class RDFtoPGConverter{
 	 static JSONArray ea = new JSONArray();
 	 
 	public static void addVertex(Statement st,int c){
-		Map m =new LinkedHashMap(2);
+	    Map m =new LinkedHashMap(2);
 	    m.put("id",c+1);
 	    m.put("vname", st.getSubject().toString());
 	    va.add(m); 
 	}
 	
 	public static void addEdge(Statement st, int c) {
-		Map m =new LinkedHashMap(4);
-		m.put("id", c+1);
-		m.put("type",st.getPredicate().toString());
+	    Map m =new LinkedHashMap(4);
+	    m.put("id", c+1);
+            m.put("type",st.getPredicate().toString());
 	    m.put("out",st.getSubject().toString());
 	    m.put("in", st.getObject().toString());
 	    ea.add(m); 
@@ -79,18 +79,18 @@ public class RDFtoPGConverter{
 	}
 	
 	public static void writeToJSON() throws FileNotFoundException{
-		PrintWriter pw = new PrintWriter("C:\\Users\\MEENAKSHI\\Desktop\\JSONExample.json");
+		PrintWriter pw = new PrintWriter("Output.json");
 		jo.put("edges", ea);
 		jo.put("vertices", va);
-	    pw.write(jo.toJSONString());
+	        pw.write(jo.toJSONString());
 		pw.flush();
 		pw.close();
 	}
 
 	public static void main(String[] args) throws IOException  {
 	
-		File initialFile = new File("F:\\Mtech\\Semester 3\\Capstone Project\\Sample data\\sp2b.n3");
-	    InputStream inputStream = new FileInputStream(initialFile);	
+		File initialFile = new File(args[0]);
+	        InputStream inputStream = new FileInputStream(initialFile);	
 		String baseURI = initialFile.toString();
 		RDFFormat format = RDFFormat.TURTLE;
 		
@@ -122,7 +122,7 @@ public class RDFtoPGConverter{
 			writeToJSON();
 		}
 		catch (RDF4JException e) {
-		  // handle unrecoverable error
+		  System.out.println("Error in converting file: "+e);
 		}
 		finally {
 		  inputStream.close();
