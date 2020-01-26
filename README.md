@@ -9,7 +9,7 @@ Benchmarks play an important role in the development of any new systems. Even th
 To use PGBench on an IDE, download the file named RDFtoPGConverter.jar from the releases section. Note that the input RDF file can be in either .ttl format or .nt format. Run the converter using the command **java -jar RDFtoPGConverter.jar input.ttl**
 The converter gives a JSON format file as an output which represents a property graph corresponding to the input RDF data.
 
-The Queries folder has queries for three different RDF benchmarks, Berlin Sparql Benchmark(BSBM), SP^2 Benchmark and Lehigh University Benchmark(LUBM). These queries were originally SPARQL and have been converted to Cypher(graph query language). They can be used to evaluate the benchmark on graphstores like Neo4j and Redis.
+The Queries folder has queries for three different RDF benchmarks, Berlin Sparql Benchmark(BSBM), SP^2 Benchmark and Lehigh University Benchmark(LUBM). These queries were originally SPARQL and have been converted to Cypher(graph query language). They can be used to evaluate the benchmark on graphstores like Neo4j and RedisGraph.
 
 ## Future work
 
