@@ -2,9 +2,9 @@
 This document provides documentation for the first version of PGBench. PGBench is a Property Graph Benchmark that takes an RDF graph as input and converts it to a property graph. Further, it runs queries on two well known Graphstores: Neo4j and RedisGraph.
 
 # Table of Contents
-*[Introduction] (#Intoduction)
-*[Usage] (#Usage)
-*[Future Work] (#Future Work)
+* [Introduction](#Intoduction)
+* [Usage](#Usage)
+* [Future Work](#Future Work)
 
 ## Introduction
 Benchmarks play an important role in the development of any new systems. Even though there exist several RDF benchmarks but none exist for property graphs. This makes evaluation of property graphstores difficult. Therefore, to bridge this gap, we developed PGBench.
