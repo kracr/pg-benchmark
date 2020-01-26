@@ -3,11 +3,14 @@ This document provides documentation for the first version of PGBench. PGBench i
 
 # Table of Contents
 * [Introduction](#Intoduction)
+* [About the Repository](#About-the-Repository)
 * [Usage](#Usage)
-* [Future Work](#Future Work)
+* [Future Work](#Future-Work)
 
 ## Introduction
 Benchmarks play an important role in the development of any new systems. Even though there exist several RDF benchmarks but none exist for property graphs. This makes evaluation of property graphstores difficult. Therefore, to bridge this gap, we developed PGBench.
+
+## About the Repository
 
 ## Usage
 To use PGBench on an IDE, download the file named RDFtoPGConverter.jar from the releases section. Note that the input RDF file can be in either .ttl format or .nt format. Run the converter using the command **java -jar RDFtoPGConverter.jar input.ttl**
