@@ -1,5 +1,8 @@
+//Returns top 5 products and their labels having productFeature where conditions mentioned in the query satisfy and 
+product not same as product ProductXYZ 
+
 MATCH(product)-[:productFeature]-(prodFeature), 
-WHERE NOTproduct = %productXYZ% 
+WHERE NOT product = %productXYZ% 
   AND product.PropertyNumeric1 = numericproperty 
   AND prodFeature.productFeature= %ProductXYZ% 
   AND Q=%ProductXYZ% 
@@ -7,6 +10,6 @@ WHERE NOTproduct = %productXYZ%
   AND product.simProperty1>product.origProperty1 - 120  
   AND  product.simProperty2<product.origProperty2 + 170  
   AND product.simProperty2>product.origProperty2 - 170 
-RETURN DISTINCTproduct, product.productLabel 
+RETURN DISTINCT product, product.productLabel 
 ORDER BY product.productLabel 
 LIMIT 5
