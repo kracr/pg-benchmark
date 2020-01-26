@@ -2,21 +2,25 @@
 This document provides documentation for the first version of PGBench. PGBench is a Property Graph Benchmark that takes an RDF graph as input and converts it to a property graph. Further, it runs queries on two well known Graphstores: Neo4j and RedisGraph.
 
 # Table of Contents
-* [Introduction](#Intoduction)
-* [About the Repository](#About-the-Repository)
-* [Usage](#Usage)
-* [Future Work](#Future-Work)
+1 [Introduction](#Intoduction)
+2 [About the Repository](#About-the-Repository)
+3 [Usage](#Usage)
+4 [Future Work](#Future-Work)
 
 ## Introduction
-Benchmarks play an important role in the development of any new systems. Even though there exist several RDF benchmarks but none exist for property graphs. This makes evaluation of property graphstores difficult. Therefore, to bridge this gap, we developed PGBench.
+Property Graphs are one of the most common representation for Knowledge Graphs, another one being RDF graphs. Even though there exist several RDF benchmarks but none exist for property graphs. This makes evaluation of property graphstores difficult. Therefore, to bridge this gap, we developed a Proprty Graph benchmark named PGBench. 
+
+Our benchmark provides an RDF to Property Graph converter. For evaluation, we have used three RDF benchmarks Lehigh University Benchmark (LUBM), SP^2 Benchmark, and Berlin SPARQL Benchmark (BSBM) to generate RDF graphs of different sizes and convert them to property graphs. We translated the SPARQL queries from each of these RDF benchmarks to their equivalent Cypher queries. Finally, we used two different property graphs databases, Neo4j and RedisGraph, for evaluating the loading time and the querying time.
+
 
 ## About the Repository
+Repository consists of the following directories and files: 
+src/main/java is a java source code directory which contains java code for RDF to Property Graph converter. The directory named Queries consists cypher queries for three different RDF benchmarks, BSBM, SP^2 Bench and LUBM. These queries were originally SPARQL and have been converted to Cypher. These queries were used to evaluation. One xml file, pom.xml which contains the maven dependencies required to build the converter. The releases section contains a jar which can be used for the direct execution of the RDF to Property Graph converter.
 
 ## Usage
 To use PGBench on an IDE, download the file named RDFtoPGConverter.jar from the releases section. Note that the input RDF file can be in either .ttl format or .nt format. Run the converter using the command **java -jar RDFtoPGConverter.jar input.ttl**
 The converter gives a JSON format file as an output which represents a property graph corresponding to the input RDF data.
 
-The Queries folder has queries for three different RDF benchmarks, Berlin Sparql Benchmark(BSBM), SP^2 Benchmark and Lehigh University Benchmark(LUBM). These queries were originally SPARQL and have been converted to Cypher(graph query language). They can be used to evaluate the benchmark on graphstores like Neo4j and RedisGraph.
 
 ## Future Work
 
