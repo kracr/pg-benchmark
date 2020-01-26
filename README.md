@@ -1,10 +1,12 @@
-# PGBench documentation
+# PGBench Documentation
 This document provides documentation for the first version of PGBench. PGBench is a Property Graph Benchmark that takes an RDF graph as input and converts it to a property graph. Further, it runs queries on two well known Graphstores: Neo4j and RedisGraph.
 
+# Table of Contents
+*[Introduction] (#Intoduction)
+*[Usage] (#Usage)
+*[Future Work] (#Future Work)
 
-* TOC {:toc} 
-
-## Goal
+## Introduction
 Benchmarks play an important role in the development of any new systems. Even though there exist several RDF benchmarks but none exist for property graphs. This makes evaluation of property graphstores difficult. Therefore, to bridge this gap, we developed PGBench.
 
 ## Usage
@@ -13,7 +15,7 @@ The converter gives a JSON format file as an output which represents a property 
 
 The Queries folder has queries for three different RDF benchmarks, Berlin Sparql Benchmark(BSBM), SP^2 Benchmark and Lehigh University Benchmark(LUBM). These queries were originally SPARQL and have been converted to Cypher(graph query language). They can be used to evaluate the benchmark on graphstores like Neo4j and RedisGraph.
 
-## Future work
+## Future Work
 
 The next stage of the work will aim at:
 1. Making the benchmark efficient.
