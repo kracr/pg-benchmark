@@ -21,7 +21,7 @@ src/main/java is a java source code directory which contains java code for RDF t
 In order to directly run the converter, download the file named RDFtoPGConverter.jar from the releases section. Note that the input RDF file can be in either .ttl format or .nt format. Run the converter using the command **java -jar RDFtoPGConverter.jar input.ttl**
 The converter gives a JSON format file as an output which represents a property graph corresponding to the input RDF data.
 
-To load the output Property Graph into Graph Database (Neo4j or RedisGraph) use the following command:
+
 
 
 
