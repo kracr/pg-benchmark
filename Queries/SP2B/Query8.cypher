@@ -1,3 +1,6 @@
+//Compute authors that have published with Paul Erdoes OR
+with an author that has published with Paul Erdoes
+
 MATCH (erdoes:Person)¡-[:creator]-(doc), 
 (doc)-[:creator]-(author),
 (doc2)-[:creator]-(author2), 
