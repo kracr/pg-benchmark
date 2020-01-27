@@ -1,3 +1,6 @@
+//Returns all distinct pairs of article author names for authors
+that have published in the same journal.
+
 MATCH(article1:Article)-[:creator]-(author1),  
 (article1:Article)-[:journal]-(journal), 
 (article2:Article)-[:creator]–(author2), 
