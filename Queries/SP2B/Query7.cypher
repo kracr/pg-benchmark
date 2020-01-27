@@ -1,3 +1,6 @@
+//Return the titles of all papers that have been cited at least
+once, but not by any paper that has not been cited itself
+
 MATCH(class)-[ISA]-(:Document), 
 (doc:class)-[:member2]-(bag2),
 (doc2)-[:references]-(bag2) 
