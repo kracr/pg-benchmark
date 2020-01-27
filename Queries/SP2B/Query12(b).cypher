@@ -1,6 +1,5 @@
-//Returns the no. of results after union of the two queries.
-Query 1: Return author names who are creators of a document where Paul Erdoes is also a creator.
-Query 2: Return author names who are creator and author of a document and author not same as erdoes.
+//Return no of authors who have published with Paul Erdos OR with an author
+that has published with “Paul Erdoes";
 
 MATCH (erdoes:Person)-[:creator]-(doc), 
 (doc)-[:creator]-(author),
