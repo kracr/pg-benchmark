@@ -1,4 +1,5 @@
-//Return product label, price, vendor title, review title, rating 1, rating 2 where country in list ['India','Argentina'] optionally match other details in optional match clause.
+//Return product label, price, vendor title, review title, rating 1, rating 2 where country in list ['India','Argentina'] 
+optionally match other products satisfying conditions in optional match clause.
 
 MATCH(ProductXYZ) 
 OPTIONAL MATCH(X:offer)-[:product]-(ProductXYZ), 
