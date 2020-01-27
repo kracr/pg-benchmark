@@ -1,5 +1,5 @@
-=//Returns the booktitle, abstract, issued year and other information of an Inproceedings having author, homepage=url, 
-pages=#page, seeAlso=ee and partof=proc. Order the results by year of issue. 
+//Returns all inproceedings with properties creator, booktitle, issued, partOf, seeAlso, title, pages, homepage, and optionally
+abstract, order according to issue year.
 
 MATCH(inproc:Inproceedings)-[:creator]-(author), 
 (inproc:Inproceedings)-[:partof]-(proc), 
