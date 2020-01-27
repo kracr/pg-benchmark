@@ -1,4 +1,6 @@
-//Returns 10 results for 'seeAlso' section of a publication after skipping first 50 results.
+//Return (up to) 10 electronic edition URLs starting from
+the 51th publication, in lexicographical order.
+
 
 MATCH(publication)-[:seeAlso]-[ee] 
 RETURN ee 
