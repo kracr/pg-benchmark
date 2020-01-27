@@ -1,4 +1,4 @@
-//Returns the no. of persons who are creators of an Article as well as an Inproceedings
+//Returns the no. of persons who appear as author of at least one inproceeding and article
 
 MATCH(article:Article)-[:creator]-(person), 
 (inproc:Inproceedings)-[:creator]-(person) 
