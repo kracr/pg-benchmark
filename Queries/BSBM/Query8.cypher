@@ -1,5 +1,5 @@
-//Returns title and other information of Product whose title=title, text=text, reviewDate=reviewDate, reviewer=reviewer, name=reviewerName
-optionally satisfy conditions, rating2=rating2, rating3=rating3, rating4=rating4 and language=en order by descending order of review date
+//Returns title and other information of Product  title, text, reviewDate, reviewer, and name
+optionally return product having rating2, rating3, rating4 and language=en order by descending order of review date
 
 MATCH(X:review)-[:reviewFor]-(ProductXYZ),
 (X:review)-[:title]-(title), 
