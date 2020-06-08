@@ -1,5 +1,3 @@
-ReadMe
-
 For converting NTRIPLES to Intermidiate Representation (PropertyGraph.serialized):
 
 spark-submit –conf spark.driver.memory=Xg –master yarn –deploy-mode cluster –class ScalableRDF2PF <Path to .jar> <HDFS path to input data directory> <HDFS path to output data directory>
