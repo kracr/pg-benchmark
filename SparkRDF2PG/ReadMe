@@ -1,0 +1,17 @@
+ReadMe
+
+For converting NTRIPLES to Intermidiate Representation (PropertyGraph.serialized):
+
+spark-submit –conf spark.driver.memory=Xg –master yarn –deploy-mode cluster –class ScalableRDF2PF <Path to .jar> <HDFS path to input data directory> <HDFS path to output data directory>
+
+For Example:
+spark-submit --conf spark.driver.memory=20g  --master yarn --deploy-mode cluster --class ScalableRDF2PG ScalableRDF2PG/target/ScalableRDF2PG-0.0.1-SNAPSHOT.jar <hdfs:///user/vinayakk/exp_3133/data/> <hdfs:///user/vinayakk/exp_3133/files>
+
+For converting Intermidiate Representation (PropertyGraph.serialized) to PropertyGraph.json:
+
+java -cp <Path to .jar> <Path to PropertyGraph.serialized> <Path to store PropertyGraph.Json>
+ 
+For Example:
+java -cp ScalableRDF2PG/target/ScalableRDF2PG-0.0.1-SNAPSHOT.jar Main /mnt/hdd2/home/vinayakk/LUBM_ntFormat/exp_3133/ /mnt/hdd2/home/vinayakk/LUBM_ntFormat/exp_3133/
+
+
